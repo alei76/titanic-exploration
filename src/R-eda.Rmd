@@ -1,0 +1,33 @@
+---
+title: "Titanic EDA"
+output: github_document
+---
+
+```{r}
+library(tidyverse)
+library(xda)
+```
+
+
+```{r}
+titanic_train <- read_csv("../data/train.csv")
+titanic_test <- read_csv("../data/test.csv")
+```
+
+This data is small enough that I play with `xda` with it blowing up my computer.
+
+```{r}
+xda::numSummary(titanic_train) 
+```
+
+- Age is missing
+- Only 38.4% survived
+
+```{r}
+xda::charSummary(titanic_train)
+```
+
+```{r}
+Plot(titanic_train, )
+```
+
